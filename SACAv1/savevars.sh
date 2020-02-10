@@ -12,7 +12,8 @@ KEY4=$9
 umask 007
 
 cd /home/$USER
-git clone -b master https://github.com/f5devcentral/f5-azure-saca.git /home/$USER/f5-azure-saca
+git clone -b master https://github.com/PlateSpinner/f5-azure-saca.git /home/$USER/f5-clone
+cp -ar /home/$USER/f5-clone/SACAv1 /home/$USER/f5-azure-saca
 cd /home/$USER/f5-azure-saca
 
 cat > /home/$USER/f5-azure-saca/.password.txt <<EOF
