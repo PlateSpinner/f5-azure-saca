@@ -125,4 +125,4 @@ az login \
 
 az account set -s $AZURE_SUBSCRIPTION_ID
 """
-print(TEMPLATE, %(output))
+print(TEMPLATE.render(output))
