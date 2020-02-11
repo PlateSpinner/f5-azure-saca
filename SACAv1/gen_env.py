@@ -79,7 +79,7 @@ export AZURE_CLIENT_ID="%(client_id)s"
 export AZURE_SECRET="%(client_secret)s"
 export AZURE_TENANT="%(tenant_id)s"
 export AZURE_RESOURCE_GROUP="%(resource_group)s"
-export AZURE_RESOURCE_GROUPS="${AZURE_RESOURCE_GROUP}_F5_External,${AZURE_RESOURCE_GROUP}_F5_Internal"
+export AZURE_RESOURCE_GROUPS="%(resource_group)s_F5_External,%(resource_group)s_F5_Internal"
 export location="%(location)s"
 
 export f5_unique_short_name="%(shortname)sext"
@@ -125,4 +125,4 @@ az login \
 
 az account set -s $AZURE_SUBSCRIPTION_ID
 """
-print(TEMPLATE.render(output))
+print(TEMPLATE.format(output))
